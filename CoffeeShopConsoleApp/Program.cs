@@ -9,19 +9,19 @@ namespace CoffeeShopConsoleApp
         {
             Console.WriteLine("Hello Coffee Shop!");
 
-            // a list of all the orders for coffe in the coffee shop
+            // a list of all the orders for coffee in the coffee shop
             List<Coffee> orderList = new List<Coffee>()
             {
-                new Coffee(),
-                new Coffee(),
-                new Coffee()
+                new Cortado(1),
+                new Latte(1),
+                new BlackCoffee(4)
 
             };
 
 
             foreach (var coffee in orderList)
             {
-                Console.WriteLine("the Price of the coffee is : "+ coffee.price());
+                Console.WriteLine($"the Price of the {coffee.ToString()} is : {coffee.Price()} \nYou have saved: {coffee.Discount()} dkk\n");
             }
 
 
